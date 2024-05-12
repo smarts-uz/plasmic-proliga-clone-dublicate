@@ -26,7 +26,7 @@
   padding: 8px;
 }
 .root:hover .freeBox__xd44L {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .freeBox__lCzs2 {
   display: flex;
@@ -109,15 +109,6 @@
 .linkmendez___0SQvQj9I92 {
   background: #2f46a5;
 }
-.link__fvOy0 {
-  position: relative;
-  opacity: 1;
-  margin-right: 0px;
-  display: none;
-}
-.root:hover .link__fvOy0 {
-  display: block;
-}
 .text__i1Dba {
   position: relative;
   width: 100%;
@@ -139,8 +130,19 @@
   min-width: 0;
   padding: 8px;
 }
-.text__naf6R {
+.freeBox__ujWbH {
+  display: flex;
   position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.text__naf6R {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -204,4 +206,28 @@
   font-weight: 700;
   color: #118808;
   min-width: 0;
+}
+.linkToPlayerInfo {
+  position: fixed;
+  opacity: 1;
+  margin-right: 0px;
+  width: auto;
+  left: auto;
+  top: 8px;
+  z-index: 4;
+  text-align: center;
+  color: var(--token-jgohepLVeKvh);
+  height: auto;
+  align-self: center;
+  right: auto;
+  bottom: 0px;
+  box-shadow: none;
+  cursor: pointer;
+  mix-blend-mode: lighten;
+  display: none;
+  padding: 5px 15px;
+  border: 1px solid var(--token-jgohepLVeKvh);
+}
+.root:hover .linkToPlayerInfo {
+  display: block;
 }

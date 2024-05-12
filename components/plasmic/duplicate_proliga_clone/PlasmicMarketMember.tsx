@@ -91,6 +91,7 @@ export const PlasmicMarketMember__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMarketMember__OverridesType = {
   root?: Flex__<"div">;
+  linkToPlayerInfo?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultMarketMemberProps {
@@ -323,19 +324,6 @@ function PlasmicMarketMember__RenderFunc(props: {
             >
               {"DEF"}
             </PlasmicLink__>
-            <PlasmicLink__
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__fvOy0
-              )}
-              component={Link}
-              href={"https://www.plasmic.app/"}
-              platform={"nextjs"}
-            >
-              {"Some link text"}
-            </PlasmicLink__>
             <div
               className={classNames(
                 projectcss.all,
@@ -370,14 +358,16 @@ function PlasmicMarketMember__RenderFunc(props: {
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__vyio0)}>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__naf6R
-              )}
-            >
-              {"previous value\n4.306.249"}
+            <div className={classNames(projectcss.all, sty.freeBox__ujWbH)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__naf6R
+                )}
+              >
+                {"previous value\n4.306.249"}
+              </div>
             </div>
           </div>
         </div>
@@ -438,18 +428,36 @@ function PlasmicMarketMember__RenderFunc(props: {
           </div>
         </div>
       </div>
+      <PlasmicLink__
+        data-plasmic-name={"linkToPlayerInfo"}
+        data-plasmic-override={overrides.linkToPlayerInfo}
+        className={classNames(
+          projectcss.all,
+          projectcss.a,
+          projectcss.__wab_text,
+          sty.linkToPlayerInfo
+        )}
+        component={Link}
+        href={"https://www.plasmic.app/"}
+        platform={"nextjs"}
+        target={"_blank"}
+      >
+        {"VIEW PROFILE"}
+      </PlasmicLink__>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "linkToPlayerInfo"],
+  linkToPlayerInfo: ["linkToPlayerInfo"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  linkToPlayerInfo: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -512,6 +520,7 @@ export const PlasmicMarketMember = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    linkToPlayerInfo: makeNodeComponent("linkToPlayerInfo"),
 
     // Metadata about props expected for PlasmicMarketMember
     internalVariantProps: PlasmicMarketMember__VariantProps,
